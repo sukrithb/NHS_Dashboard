@@ -1,0 +1,15 @@
+# Power BI
+*.pbix.bak
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+
+# Data files - not published to GitHub (see Data/README.md for how to obtain)
+Data/*.csv
+Data/*.xlsx
+!Data/README.md
