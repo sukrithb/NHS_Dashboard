@@ -1,15 +1,5 @@
 # Data Insights & Understanding Log
 
-A running record of questions raised while working with this dataset,
-what was found, and why it matters. Kept separate from the main project
-documentation because this is the part that actually demonstrates data
-understanding, not just execution — worth reviewing before an interview.
-
-**How to use this:** every time something in the data looks odd, doesn't
-match intuition, or raises a "wait, why is that?" moment — write it down
-here before moving on, even if the answer turns out to be simple. The
-question itself is the evidence of thinking critically about the data.
-
 ---
 
 ### 1. Calendar year vs. financial year distorted year-on-year growth
