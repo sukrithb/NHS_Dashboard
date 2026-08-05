@@ -17,7 +17,7 @@ work into structured data analysis: relational database design, SQL, and
 BI visualisation, using real, publicly available NHS statistics.
 
 **Data source:** NHS England open data (Hospital Episode Statistics /
-Consultation activity), monthly national totals.
+Consultation activity), monthly national totals.  
 
 ---
 
@@ -44,9 +44,9 @@ producing charts from whatever the source file happened to contain.
 
 ---
 
-## 4. Project Phases
+## 4. Project Development Journey
 
-### Phase 1 — Data Preparation & Database Design ✅ Complete
+### Phase 1 — Data Preparation & Database Design 
 
 - Sourced raw monthly NHS activity data (`Consultation.csv`, 216 rows,
   April 2007–March 2025).
@@ -68,7 +68,7 @@ recalculated in every query, and it mirrors how real BI/data warehouse
 projects are structured, which is the pattern Power BI itself expects
 for clean relationships.
 
-### Phase 2 — SQL Database Build & Analysis ✅ Complete
+### Phase 2 — SQL Database Build & Analysis 
 
 - Created the database and both tables in SQL Server with explicit,
   appropriate data types (e.g. `DECIMAL` for percentages rather than
@@ -95,7 +95,7 @@ deliberate correction made after reviewing query output, not caught in
 advance — a genuine example of validating results rather than assuming
 they're right.
 
-### Phase 3 — Power BI Dashboard ✅ Complete
+### Phase 3 — Power BI Dashboard 
 
 - Connected Power BI Desktop to the SQL Server database (Import mode),
   with the `DateKey` relationship between `Dim_Date` and `Fact_Consultation`
@@ -124,30 +124,6 @@ that's actually correct regardless of how the data is filtered or sliced —
 a foundational Power BI/DAX concept (measures vs. columns) applied
 correctly rather than just visually.
 
-### Phase 4 — Publishing & Documentation ⬜ Not Started
-
-- Push project (SQL scripts, Python script, documentation, `.pbix` file)
-  to GitHub as a public portfolio repository.
-- Add dashboard screenshots and a short "Key Findings" write-up to the
-  repository README, using real figures pulled from the SQL analysis
-  (e.g. quantified COVID-19 impact on activity, and recovery timeline).
-- Final proofread of documentation and repository structure.
-
-### Phase 5 — Future Work (Planned, Not Started) ⬜
-
-Three further datasets were sourced alongside this one, intended as
-follow-on projects reusing the same skills:
-
-- **Project 2 — NHS Workforce Analytics**, using `NHS_Workforce.xlsx`.
-- **Project 3 — NHS Emergency Care Dashboard**, using `AE_Activity.xlsx`
-  and `AE_Quality_Index.xlsx`.
-- **Project 4 (flagship) — NHS Demand vs. Capacity Dashboard**, combining
-  this project's outpatient/inpatient activity data with workforce and
-  A&E data, to explore whether hospital activity has grown faster than
-  staffing capacity over the same period.
-
-These are scoped but not yet started, and depend on completing Phases
-3–4 of this project first.
 
 ---
 
@@ -181,10 +157,19 @@ assumptions, is in [`Insights_Log.md`](Insights_Log.md).
 
 ---
 
-## 6. Notes for Future Reference
+6. Project Outcome
+Successfully delivered:
 
-- All yearly analysis in this project uses **NHS financial year**, not
-  calendar year — see Phase 2 decision above for why.
-- The full SQL scripts, Python cleaning script, and query set are version
-  controlled and reproducible from raw data — see project `README.md`
-  for setup steps.
+✅ Python data cleaning pipeline
+
+✅ SQL Server star schema database
+
+✅ 12 analytical SQL queries
+
+✅ Power BI dashboard (4 pages)
+
+✅ GitHub documentation
+
+✅ Reproducible project structure
+
+The project demonstrates end-to-end analytics skills including data preparation, database design, validation, SQL analysis, DAX measures, dashboard development, and healthcare data interpretation using real NHS datasets.
