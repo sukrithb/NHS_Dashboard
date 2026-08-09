@@ -1,0 +1,49 @@
+<svg viewBox="0 0 820 420" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="820" height="420" fill="#ffffff"/>
+
+  <!-- Dim_Date table -->
+  <rect x="40" y="60" width="260" height="260" rx="6" fill="#1F3864" stroke="#0d1f3c" stroke-width="1.5"/>
+  <rect x="40" y="60" width="260" height="36" rx="6" fill="#1F3864"/>
+  <text x="170" y="83" fill="#ffffff" font-size="16" font-weight="bold" text-anchor="middle">Dim_Date</text>
+  <rect x="40" y="96" width="260" height="224" fill="#ffffff" stroke="#1F3864"/>
+
+  <text x="56" y="118" font-size="13" font-weight="bold" fill="#1F3864">DateKey (PK)</text>
+  <text x="56" y="140" font-size="13" fill="#333">MonthEndDate</text>
+  <text x="56" y="162" font-size="13" fill="#333">Year</text>
+  <text x="56" y="184" font-size="13" fill="#333">Month</text>
+  <text x="56" y="206" font-size="13" fill="#333">MonthName</text>
+  <text x="56" y="228" font-size="13" fill="#333">Quarter</text>
+  <text x="56" y="250" font-size="13" fill="#333">FinancialYear</text>
+  <text x="56" y="278" font-size="11" fill="#777" font-style="italic">216 rows — one per month,</text>
+  <text x="56" y="294" font-size="11" fill="#777" font-style="italic">Apr 2007 – Mar 2025</text>
+
+  <!-- Fact_Consultation table -->
+  <rect x="500" y="30" width="280" height="360" rx="6" fill="#0B5D3B" stroke="#063d27" stroke-width="1.5"/>
+  <rect x="500" y="30" width="280" height="36" rx="6" fill="#0B5D3B"/>
+  <text x="640" y="53" fill="#ffffff" font-size="16" font-weight="bold" text-anchor="middle">Fact_Consultation</text>
+  <rect x="500" y="66" width="280" height="324" fill="#ffffff" stroke="#0B5D3B"/>
+
+  <text x="516" y="88" font-size="13" font-weight="bold" fill="#0B5D3B">DateKey (PK, FK)</text>
+  <text x="516" y="110" font-size="13" fill="#333">Outpatient_Total_Appointments</text>
+  <text x="516" y="132" font-size="13" fill="#333">Outpatient_Attended_Appointments</text>
+  <text x="516" y="154" font-size="13" fill="#333">Outpatient_DNA_Appointment</text>
+  <text x="516" y="176" font-size="13" fill="#333">Outpatient_Percent_DNA</text>
+  <text x="516" y="198" font-size="13" fill="#333">Outpatient_Attendance_Type_1 / 2</text>
+  <text x="516" y="220" font-size="13" fill="#333">APC_Finished_Consultant</text>
+  <text x="516" y="242" font-size="13" fill="#333">APC_FCEs_with_a_procedure</text>
+  <text x="516" y="264" font-size="13" fill="#333">APC_Day_Case_Episodes</text>
+  <text x="516" y="286" font-size="13" fill="#333">APC_Ordinary_Episodes</text>
+  <text x="516" y="308" font-size="13" fill="#333">APC_Emergency</text>
+  <text x="516" y="330" font-size="13" fill="#333">APC_Finished_Admission_Episodes</text>
+  <text x="516" y="358" font-size="11" fill="#777" font-style="italic">216 rows — one per month,</text>
+  <text x="516" y="374" font-size="11" fill="#777" font-style="italic">monthly national totals</text>
+
+  <!-- Relationship line -->
+  <line x1="300" y1="118" x2="500" y2="88" stroke="#444" stroke-width="1.5"/>
+  <circle cx="300" cy="118" r="4" fill="#1F3864"/>
+  <text x="330" y="105" font-size="12" fill="#444">1</text>
+  <text x="470" y="80" font-size="12" fill="#444">*</text>
+  <text x="400" y="140" font-size="11" fill="#666" text-anchor="middle">joined on DateKey</text>
+
+  <text x="410" y="20" font-size="13" fill="#333" text-anchor="middle" font-weight="bold">Star Schema — one date dimension, one fact table</text>
+</svg>
