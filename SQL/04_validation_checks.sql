@@ -13,7 +13,7 @@ USE NHS_Hospital_Activity;
 GO
 
 -- 1. Row count check — expect 216 rows in both tables (18 years x 12 months)
-SELECT 'Dim_Date' AS TableName, COUNT(*) AS RowCount, 216 AS Expected FROM dbo.Dim_Date
+SELECT 'Dim_Date' AS TableName, COUNT(*) AS ActualRowCount, 216 AS Expected FROM dbo.Dim_Date
 UNION ALL
 SELECT 'Fact_Consultation', COUNT(*), 216 FROM dbo.Fact_Consultation;
 GO
