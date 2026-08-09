@@ -108,9 +108,15 @@ FY2019/20 vs FY2020/21 comparison, with a written summary of the findings.
   exceed first attendances, consistent with NHS outpatient activity being
   dominated by ongoing management of long-term conditions rather than
   one-off consultations.
+- **Shift toward day case care:** Day Case episodes never overtook
+  Ordinary (overnight) episodes in raw volume, but Day Case's *share* of
+  total episodes rose steadily from **31.0%** (FY2007/08) to **38.4%**
+  (FY2024/25), consistent with the known NHS-wide shift toward same-day
+  procedures — confirmed as a follow-up after the initial (different)
+  framing of this question was tested and rejected.
 - See [`Documentation/Insights_Log.md`](Documentation/Insights_Log.md) for
-  the full reasoning behind each finding, including one hypothesis
-  (Day Case overtaking Ordinary episodes) that the data did not support.
+  the full reasoning behind each finding, including the initial Day Case
+  hypothesis that was rejected before the refined version above was tested.
 
 ## 🔍 Data Insights Log
 Beyond the dashboard itself, [`Documentation/Insights_Log.md`](Documentation/Insights_Log.md)
