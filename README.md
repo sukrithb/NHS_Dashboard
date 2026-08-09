@@ -114,5 +114,19 @@ FY2019/20 vs FY2020/21 comparison, with a written summary of the findings.
 
 ## 🔍 Data Insights Log
 Beyond the dashboard itself, [`Documentation/Insights_Log.md`](Documentation/Insights_Log.md)
+tracks questions raised while working through the data — things that looked
+odd, didn't match intuition, or needed checking against NHS definitions —
+and what was found. This is deliberately kept separate from the headline
+metrics, since it's the part that shows actual understanding of the data
+rather than just correct chart output.
 
-
+## 🔮 Next Steps (Roadmap)
+- **Project 2 — NHS Demand vs Capacity Dashboard:** cross-sectional
+  comparison of workforce staffing against A&E performance across NHS
+  trusts, using a matched February 2025 snapshot (`NHS_Workforce.xlsx` +
+  NHS England ECDS Performance data)
+- **Project 3 — NHS A&E Long-Run Trust & Regional Trends:** a
+  longer-term follow-on analysing trust-level A&E demand across a wider
+  historical window (2012 onward), where the underlying NHS data
+  collection format has changed multiple times — scoped as its own
+  project rather than an extension of Project 2
