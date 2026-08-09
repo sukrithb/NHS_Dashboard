@@ -43,6 +43,14 @@ NHS_Hospital_Activity_Dashboard/
 └── README.md
 ```
 
+## 🗄️ Schema
+![ERD Diagram](Documentation/ERD_Diagram.svg)
+
+A simple star schema: one date dimension joined to one fact table on
+`DateKey`. Kept deliberately simple for this dataset's size — see
+[`PROJECT_DOCUMENTATION.md`](Documentation/PROJECT_DOCUMENTATION.md)
+for the reasoning behind this design choice.
+
 ## 🚀 How to Reproduce
 1. Download the source data and save as `Data/Consultation.csv` — see [`Data/README.md`](Data/README.md) for the exact source link and instructions
 2. Run `Scripts/01_clean_and_prepare_data.py` to generate `Dim_Date.csv` and `Fact_Consultation.csv`
@@ -113,8 +121,12 @@ metrics, since it's the part that shows actual understanding of the data
 rather than just correct chart output.
 
 ## 🔮 Next Steps (Roadmap)
-- **Project 2:** NHS Workforce Analytics (`NHS_Workforce.xlsx`)
-- **Project 3:** NHS Emergency Care Dashboard (`AE_Activity.xlsx`, `AE_Quality_Index.xlsx`)
-- **Project 4 (Flagship):** NHS Demand vs Capacity Dashboard, combining
-  Consultation, Workforce, and A&E data to answer: *has activity grown
-  faster than workforce?*
+- **Project 2 — NHS Demand vs Capacity Dashboard:** cross-sectional
+  comparison of workforce staffing against A&E performance across NHS
+  trusts, using a matched February 2025 snapshot (`NHS_Workforce.xlsx` +
+  NHS England ECDS Performance data)
+- **Project 3 — NHS A&E Long-Run Trust & Regional Trends:** a
+  longer-term follow-on analysing trust-level A&E demand across a wider
+  historical window (2012 onward), where the underlying NHS data
+  collection format has changed multiple times — scoped as its own
+  project rather than an extension of Project 2
