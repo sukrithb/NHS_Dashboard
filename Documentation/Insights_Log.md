@@ -1,5 +1,15 @@
 # Data Insights & Understanding Log
 
+A running record of questions raised while working with this dataset,
+what was found, and why it matters. Kept separate from the main project
+documentation because this is the part that actually demonstrates data
+understanding, not just execution — worth reviewing before an interview.
+
+**How to use this:** every time something in the data looks odd, doesn't
+match intuition, or raises a "wait, why is that?" moment — write it down
+here before moving on, even if the answer turns out to be simple. The
+question itself is the evidence of thinking critically about the data.
+
 ---
 
 ### 1. Calendar year vs. financial year distorted year-on-year growth
@@ -86,14 +96,6 @@ during COVID, reducing the pool of appointments that could be missed, and
 (2) patients who did have a scheduled appointment during that period were
 often more anxious not to miss it, given reduced access to care generally.
 
-**Why it matters:** This is a stronger dashboard story than a single
-static "current DNA rate" figure — it shows sustained long-term
-improvement in patient attendance, plus a specific, explainable anomaly
-during COVID, rather than just one number with no context. *(Exact
-percentage figures to be finalised and quoted precisely once cross-checked
-against Query_04 output, before this goes into the final Key Findings
-section.)*
-
 ---
 
 ### 5. Day Case episodes have NOT overtaken Ordinary episodes (hypothesis rejected)
@@ -117,7 +119,8 @@ more clearly as a % share of total episodes rather than in absolute
 volumes (both are growing, so day case's *share* of the total could still
 be rising even while remaining below ordinary in raw numbers) — worth a
 follow-up query if time allows, rather than stating the original
-hypothesis as fact.
+hypothesis as fact. **(See entry 7 for the resolution — the share
+framing was confirmed.)**
 
 ---
 
@@ -138,36 +141,38 @@ financial years.
   only occurred in **FY2023/24**, which ended 8.4% above FY2019/20 volume.
 
 **Why it matters:** The gap between the outpatient drop (18.4%) and the
-inpatient admissions drop (25.5%) is itself a finding worth explaining,
-not just reporting — elective/planned admissions were more aggressively
-cancelled to preserve bed capacity during COVID, whereas some outpatient
-activity could continue via phone/video consultation rather than being
-cancelled outright. This is the headline number for the project — used
-directly in the Page 4 text box and the README Key Findings section.
+inpatient admissions drop (25.5%) likely reflects that elective/planned
+admissions were more aggressively cancelled to preserve bed capacity
+during COVID, whereas some outpatient activity could continue via
+phone/video consultation rather than being cancelled outright. This is
+the headline number for the project — used directly in the Page 4 text
+box and the README Key Findings section.
 
 ---
 
-### 7. Confirming exact data provenance and licence before publishing
+### 7. Day Case share of total episodes HAS risen steadily (resolves the open question from #5)
 
-**Observation:** When preparing to publish this project publicly, it
-became important to state precisely where the data came from — not just
-"NHS open data" generally, but the exact dataset, source, and licence.
+**Query used:** `Query_13_day_case_percentage_share.sql`, the follow-up
+scoped in entry #5.
 
-**Finding:** The data used in this project is sourced from the Kaggle
-dataset "NHS Open Dataset: Hospital Episode Statistics," a curated
-collection of NHS Digital's Hospital Episode Statistics (HES) covering
-Admitted Patient Care, A&E, and Outpatients data. It is licensed under the
-Open Government Licence v3.0, traceable back to NHS Digital's own HES
-service page.
+**Finding:** While Day Case episodes never overtook Ordinary episodes in
+absolute volume (confirmed in #5), Day Case's **share** of total
+episodes has risen steadily and substantially: from **31.0%** in
+FY2007/08 to **38.4%** in FY2024/25 — an 18-year upward trend, consistent
+with the well-documented NHS-wide shift toward same-day procedures. The
+familiar COVID pattern shows up here too: FY2020/21 is the low point of
+the whole series (29.45%, the only year below FY2007/08's starting
+level), followed by the fastest sustained growth in the dataset from
+FY2022/23 onward, ending at the series' all-time high.
 
-**Why it matters:** Citing the specific curated source (Kaggle) as well as
-the original authoritative source (NHS Digital) and the licence gives
-anyone reviewing the project a way to verify the data's legitimacy and
-terms of use, rather than a vague "publicly available NHS data" claim.
-This also directly informed the decision not to commit the raw data files
-to the GitHub repo — since it's freely and licensably available from a
-named source, redistributing a copy adds no value and only risks the repo
-holding a stale or unlicensed copy over time.
+**Why it matters:** This is the correct resolution to the hypothesis
+first raised in entry 5 — the original framing (does Day Case overtake
+Ordinary in raw numbers) was genuinely wrong, but the refined framing
+(is Day Case's share of the total rising) is genuinely right. Worth
+keeping both entries rather than editing entry 5 to hide the initial
+miss — the sequence (wrong framing → rejected → refined framing →
+confirmed) is a more honest and more useful record than only showing
+the final correct answer.
 
 ---
 
